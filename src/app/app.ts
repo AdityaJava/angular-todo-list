@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './app.css'
 })
 export class App {
-  protected title = 'cwh-todo-list';
+  protected title = 'This is app title';
+  constructor() {
+    // setTimeout(() => {
+    //   this.title = 'This is app title after 1 second';
+    // },  1000);  
+  }
 }
