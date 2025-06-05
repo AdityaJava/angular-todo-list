@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { TodoComponent } from './MyComponents/todo/todo.component';
+import { TodoItemComponent } from './MyComponents/todo-item/todo-item.component';
 
 @NgModule({
   declarations: [
     App,
-    TodoComponent
+    TodoComponent,
+    TodoItemComponent
   ],
   imports: [
     BrowserModule,
