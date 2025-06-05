@@ -1,1 +1,6 @@
-<p>todo works!</p>
+<ul *ngFor="let todo of todos">
+    <li>{{todo.id}}</li>
+    <li>
+        {{ todo.title }} - {{ todo.active ? 'Completed' : 'Pending' }}
+    </li>
+</ul>
