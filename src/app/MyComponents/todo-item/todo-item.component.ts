@@ -20,6 +20,9 @@ export class TodoItemComponent {
   @Output()
   todoDelete: EventEmitter<Todo> = new EventEmitter<Todo>();
 
+  @Output()
+  todoToggle : EventEmitter<Todo> = new EventEmitter<Todo>();
+
   constructor() {
 
   }
@@ -29,5 +32,10 @@ export class TodoItemComponent {
     //It will emit the todo item to the parent component
     this.todoDelete.emit(this.todo)
     console.log("Delete todo with id: " + this.todo.id);
+  }
+
+  onToggle(){
+    console.log("Toggle todo with id: " + this.todo.id);
+    this.todoToggle.emit(this.todo);
   }
 }

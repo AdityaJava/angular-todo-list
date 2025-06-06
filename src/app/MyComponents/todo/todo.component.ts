@@ -41,4 +41,11 @@ export class TodoComponent {
     this.todos.push(todo);
     localStorage.setItem("todos", JSON.stringify(this.todos));
   }
+
+  toggleTodo(todo: Todo){
+    let index = this.todos.indexOf(todo);
+    this.todos[index].active = !this.todos[index].active;
+    console.log("Toggle todo listened in parent with id: " + todo.id + " and active: " + this.todos[index].active);
+    localStorage.setItem("todos", JSON.stringify(this.todos));
+  }
 }

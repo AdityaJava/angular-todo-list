@@ -5,7 +5,14 @@
 @else{
 <div *ngFor="let todo of todos">
     <!--(todoDelete) is and event emitted by child component-->
-    <todo-item [todo]="todo" (todoDelete)="deleteTodo($event)">
+    <todo-item [todo]="todo" (todoDelete)="deleteTodo($event)" (todoToggle)="toggleTodo($event)">
+        <!--todo is the input property of todo-item component-->
+        <!--todoDelete is the output property of todo-item component-->
+        <!--todoToggle is the output property of todo-item component-->
+
+
+        <h5 class="text-center">{{todo.title}}</h5>
+        <p class="text-center">{{todo.desc}}</p>
     </todo-item>
 </div>
 }
