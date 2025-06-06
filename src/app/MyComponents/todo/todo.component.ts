@@ -16,9 +16,17 @@ export class TodoComponent {
       { id: 3, title: 'Deploy the App', desc: 'Deploy the App', active: false }
     ]
   }
+  //This is a method that will be called when the delete button is clicked in the child component
+  //It will receive the todo item as an argument and will remove it from the todos array
   deleteTodo(todo: Todo){
     console.log("Delete todo listened in paren with id:  " + todo.id);
     this.todos = this.todos.filter(t =>t.id!=todo.id)
   }
 
+  //This is a method that will be called when the add button is clicked in the child component
+  //It will receive the todo item as an argument and will add it to the todos array
+  addTodo(event : any){
+    console.log("Add todo listened in parent with id: " + event);
+    this.todos.push(event);
+  }
 }

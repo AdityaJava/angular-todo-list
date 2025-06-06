@@ -5,16 +5,20 @@ import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { TodoComponent } from './MyComponents/todo/todo.component';
 import { TodoItemComponent } from './MyComponents/todo-item/todo-item.component';
+import { AddTodoComponent } from './MyComponents/add-todo/add-todo.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     App,
     TodoComponent,
-    TodoItemComponent
+    TodoItemComponent,
+    AddTodoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners()
