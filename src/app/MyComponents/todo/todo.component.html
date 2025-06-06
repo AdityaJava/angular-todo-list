@@ -1,11 +1,11 @@
-<add-todo (todoAdd) = "addTodo($event)"></add-todo>
+<add-todo (todoAdd)="addTodo($event)"></add-todo>
 @if(todos.length===0){
-    <p>Your todos are empty</p>
+<p>Your todos are empty</p>
 }
 @else{
-    <div *ngFor="let todo of todos">
-        <!--(todoDelete) is and event emitted by child component-->
-        <todo-item [todo]="todo" (todoDelete) = "deleteTodo($event)">
-        </todo-item>
-    </div>
+<div *ngFor="let todo of todos">
+    <!--(todoDelete) is and event emitted by child component-->
+    <todo-item [todo]="todo" (todoDelete)="deleteTodo($event)">
+    </todo-item>
+</div>
 }
