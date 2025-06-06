@@ -1,4 +1,5 @@
 <div *ngFor="let todo of todos">
-    <todo-item [todo]="todo">
+    <!--(todoDelete) is and event emitted by child component-->
+    <todo-item [todo]="todo" (todoDelete) = "deleteTodo($event)">
     </todo-item>
 </div>

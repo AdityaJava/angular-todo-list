@@ -16,5 +16,8 @@ export class TodoComponent {
       { id: 3, title: 'Deploy the App', desc: 'Deploy the App', active: false }
     ]
   }
+  deleteTodo(todo: Todo){
+    console.log("Delete todo listened in paren with id:  " + todo.id);
+  }
 
 }
