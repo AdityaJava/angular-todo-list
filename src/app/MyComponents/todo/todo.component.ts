@@ -18,6 +18,7 @@ export class TodoComponent {
   }
   deleteTodo(todo: Todo){
     console.log("Delete todo listened in paren with id:  " + todo.id);
+    this.todos = this.todos.filter(t =>t.id!=todo.id)
   }
 
 }
