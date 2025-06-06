@@ -25,8 +25,8 @@ export class TodoComponent {
 
   //This is a method that will be called when the add button is clicked in the child component
   //It will receive the todo item as an argument and will add it to the todos array
-  addTodo(event : any){
-    console.log("Add todo listened in parent with id: " + event);
-    this.todos.push(event);
+  addTodo(todo : Todo){
+    console.log("Add todo listened in parent with id: " + todo);
+    this.todos.push(todo);
   }
 }
